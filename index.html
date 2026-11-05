@@ -1,95 +1,321 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laiba Imran | Electrical Control Systems & Research Engineer</title>
-    <style>
-        :root { --primary: #0077b5; --dark: #121212; --light: #f4f4f4; --gray: #ffffff; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background: var(--light); }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #0e1e38, var(--primary)); color: #fff; padding: 60px 20px; text-align: center; border-bottom: 5px solid #005582; }
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 0.5px; }
-        header p { font-size: 1.2em; opacity: 0.9; margin: 10px 0 20px 0; }
-        .btn { display: inline-block; background: #fff; color: var(--primary); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 5px; transition: 0.3s; }
-        .btn:hover { background: #e1f5fe; transform: translateY(-2px); }
-        .section { background: var(--gray); padding: 30px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: #0e1e38; border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-top: 0; }
-        .metric-box { background: #eef7fc; border-left: 5px solid var(--primary); padding: 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
-        .badge { background: #0e1e38; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
-        .footer { text-align: center; padding: 4px 0; color: #777; font-size: 0.9em; margin-top: 4px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laiba Imran - Electrical Engineering Graduate specializing in Power Electronics, Smart Grids and Renewable Energy.">
+<title>Laiba Imran | Electrical Engineer</title>
+
+<style>
+:root {
+  --bg: #07111f;
+  --panel: #101e30;
+  --cyan: #42e8e0;
+  --blue: #68a9ff;
+  --text: #edf5ff;
+  --muted: #a5b5c9;
+  --border: rgba(255,255,255,.1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: white; }
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(7,17,31,.94);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 7%;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 15px;
+}
+.logo { font-size: 20px; font-weight: bold; color: var(--cyan); }
+.navlinks { display: flex; gap: 20px; flex-wrap: wrap; }
+.navlinks a { color: var(--text); font-size: 13px; }
+section { padding: 85px 9%; scroll-margin-top: 75px; }
+.hero {
+  min-height: 85vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  background: radial-gradient(ellipse at 80% 30%, #123b53 0%, transparent 45%);
+}
+.tag { color: var(--cyan); letter-spacing: 3px; font-size: 13px; }
+h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.15; margin: 18px 0; }
+h1 span, h2 span { color: var(--cyan); }
+.hero p { color: var(--muted); max-width: 650px; font-size: 18px; }
+.buttons { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+.btn {
+  padding: 12px 22px; border: 1px solid var(--cyan);
+  border-radius: 7px; display: inline-block;
+  color: var(--cyan); font-weight: bold;
+}
+.btn.primary { background: var(--cyan); color: #07111f; }
+h2 { font-size: 34px; margin-bottom: 28px; }
+h3 { margin-bottom: 10px; color: var(--cyan); }
+.section-intro { color: var(--muted); margin-bottom: 25px; }
+.panel {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 25px;
+}
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 20px;
+}
+.panel p, .panel li { color: var(--muted); }
+.panel ul { padding-left: 20px; margin-top: 10px; }
+.metric { font-size: 30px; color: var(--cyan); font-weight: bold; }
+.small { color: var(--muted); font-size: 13px; }
+.pill {
+  display: inline-block; padding: 6px 12px;
+  border: 1px solid var(--border); border-radius: 20px;
+  margin: 5px; font-size: 13px; color: var(--cyan);
+}
+.timeline { border-left: 2px solid var(--cyan); padding-left: 24px; }
+.timeline .panel { margin-bottom: 22px; }
+footer {
+  text-align: center; padding: 35px;
+  border-top: 1px solid var(--border); color: var(--muted);
+}
+@media(max-width:600px) {
+  section { padding: 65px 6%; }
+  nav { padding: 14px 5%; }
+  .navlinks { gap: 12px; }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <h1>LAIBA IMRAN</h1>
-        <p>Electrical Engineering Graduate | Power Electronics & Smart Grid Control Research</p>
-        <a href="mailto:imranlaiba404@gmail.com" class="btn">📧 Email Me</a>
-        <a href="https://linkedin.com" target="_blank" class="btn">💼 LinkedIn Profile</a>
+<nav>
+  <div class="logo">LAIBA IMRAN</div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="tag">ELECTRICAL ENGINEERING · POWER & ENERGY</div>
+  <h1>Engineering a<br><span>Smarter Energy</span><br>Future.</h1>
+  <p>
+    I am Laiba Imran, an Electrical Engineering graduate interested in
+    power electronics, smart grid control systems, microgrids and
+    renewable energy technologies.
+  </p>
+  <div class="buttons">
+    <a class="btn primary" href="#research">Explore My Research</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About <span>Me</span></h2>
+  <div class="panel">
+    <p>
+      I graduated with a Bachelor of Science in Electrical Engineering
+      from Air University, Islamabad (2025). My academic interests
+      include power electronics, predictive control, decentralized
+      smart grid architectures and renewable energy systems.
+    </p>
+    <br>
+    <p>
+      My research explores neural network-based predictive control
+      strategies for power electronic converters in microgrids.
+      I am interested in applying engineering and simulation
+      techniques to practical energy-system challenges.
+    </p>
+    <br>
+    <p><strong>Education:</strong> BS Electrical Engineering</p>
+    <p><strong>University:</strong> Air University, Islamabad</p>
+    <p><strong>Graduation:</strong> June 2025</p>
+    <p><strong>Location:</strong> Islamabad, Pakistan</p>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research & <span>Publications</span></h2>
+  <p class="section-intro">
+    My research focuses on intelligent control of power electronic
+    converters for microgrid applications.
+  </p>
+
+  <div class="panel">
+    <div class="tag">IEEE CONFERENCE PUBLICATION · 2025</div>
+    <h3 style="margin-top:12px">
+      Neural Network-Based Predictive Control Strategy for Power
+      Electronic Converters in Microgrids
+    </h3>
+    <p>
+      Primary-author research investigating neural network-based
+      predictive control (NNPC) and its performance compared with
+      conventional PI control for a power electronic converter.
+    </p>
+    <br>
+    <a href="https://doi.org/10.1109/MACS68476.2025.11453371"
+       target="_blank" rel="noopener">View IEEE publication ↗</a>
+  </div>
+
+  <h3 style="margin-top:35px">Simulation Results</h3>
+  <p class="section-intro">
+    Reported results from the tested simulation scenarios.
+  </p>
+
+  <div class="grid">
+    <div class="panel">
+      <div class="small">PI settling time</div>
+      <div class="metric">2.8 ms</div>
+      <p>Reported settling time within the 2% band.</p>
     </div>
-</header>
+    <div class="panel">
+      <div class="small">NNPC settling time</div>
+      <div class="metric">Below 0.8 ms</div>
+      <p>Faster transient response in the tested scenario.</p>
+    </div>
+    <div class="panel">
+      <div class="small">NNPC validation MSE</div>
+      <div class="metric">1.3857 × 10⁻⁵</div>
+      <p>Reported model validation mean squared error.</p>
+    </div>
+  </div>
 
-<div class="container">
+  <div class="panel" style="margin-top:20px">
+    <h3>Key Research Observations</h3>
+    <ul>
+      <li>NNPC demonstrated faster settling than PI control.</li>
+      <li>PI control showed more initial overshoot in the comparison.</li>
+      <li>NNPC produced a well-damped response.</li>
+      <li>NNPC eliminated steady-state error in the tested scenarios.</li>
+    </ul>
+    <p class="small" style="margin-top:15px">
+      These findings are simulation-based and should not be interpreted
+      as field or hardware deployment results.
+    </p>
+  </div>
+</section>
 
-    <div class="section">
-        <h2>🔬 Peer-Reviewed Publication & Simulation Analytics</h2>
-        <span class="badge">IEEE Xplore Indexed</span>
-        <h3>"Neural Network-Based Predictive Control Strategy for Power Electronic Converters in Microgrids"</h3>
-        <p><strong>Primary Author.</strong> Formulated, coded, and validated a data-driven Model Predictive Control (MPC) framework using artificial neural networks to accurately learn nonlinear system dynamics and variables for microgrid power electronics without traditional rigid modeling constraints.</p>
-        
-        <div class="metric-box">
-            <h4>📈 Verified Simulation Benchmarks (Within Tested Scenarios):</h4>
-            <ul>
-                <li>Optimized transient-response recovery speed by approximately <strong>52%</strong> compared to standard PI controllers.</li>
-                <li>Successfully decreased dynamic voltage loop settling times from <strong>2.8 ms down to less than 0.8 ms</strong>.</li>
-                <li>Engineered high-fidelity closed-loop control system models and grid-tied topologies using MATLAB/Simulink.</li>
-            </ul>
-        </div>
-        <p>🔗 <strong>Official Cross-Reference Registry:</strong> <a href="https://doi.org" target="_blank">DOI: 10.1109/MACS68476.2025.11453371</a></p>
+<section id="projects">
+  <h2>Engineering <span>Interests</span></h2>
+  <div class="grid">
+    <div class="panel">
+      <h3>Power Electronics</h3>
+      <p>Converter modelling, control strategies and simulation.</p>
+    </div>
+    <div class="panel">
+      <h3>Smart Grids & Microgrids</h3>
+      <p>Decentralized architectures and intelligent energy control.</p>
+    </div>
+    <div class="panel">
+      <h3>Renewable Energy</h3>
+      <p>Power-system integration and sustainable energy technologies.</p>
+    </div>
+    <div class="panel">
+      <h3>Converter Control</h3>
+      <p>Predictive control, PI control and MATLAB/Simulink modelling.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience & <span>Leadership</span></h2>
+  <div class="timeline">
+    <div class="panel">
+      <h3>Punjab Energy Department</h3>
+      <p><strong>Electrical Engineering Intern · 6 weeks</strong></p>
+      <p>
+        Gained practical exposure to electrical inspection activities,
+        electrical safety checks and power-system protection-related
+        work.
+      </p>
+      <p class="small">Islamabad / Punjab, Pakistan</p>
     </div>
 
-    <div class="section">
-        <h2>⚡ Industrial Operations & Experience</h2>
-        
-        <h3>Electrical Engineering Intern</h3>
-        <p><em>Punjab Energy Department — Electric Inspector Office, Islamabad | Jul 2024 – Aug 2024</em></p>
-        <ul>
-            <li>Supported field safety inspections and regulatory compliance assessments of public facilities and high-priority energy infrastructures.</li>
-            <li>Assisted senior inspectors with analytical testing instrumentation, earthing/grounding checks, and electrical insulation protection relays.</li>
-            <li>Evaluated critical cooling-system thermal metrics using advanced radiation/temperature diagnostics and managed engineering record synthesis.</li>
-        </ul>
-
-        <h3>Engineering Intern</h3>
-        <p><em>Pakistan Aeronautical Complex (PAC), Kamra | Jul 2022 – Aug 2022</em></p>
-        <ul>
-            <li>Acquired deep industrial system insights regarding power converter applications, high-power static inverters, and multi-tier distribution configurations.</li>
-            <li>Observed structural aircraft electrical architectures and asset management practices within a highly secure aerospace environment.</li>
-        </ul>
+    <div class="panel">
+      <h3>Robotics & Automation Society</h3>
+      <p><strong>General Secretary / General Manager</strong></p>
+      <ul>
+        <li>Organized a three-day Arduino IDE and hardware workshop.</li>
+        <li>Delivered a workshop lecture.</li>
+        <li>Helped organize a three-day national-level event.</li>
+        <li>Received a Vice Chancellor's Letter of Recognition.</li>
+      </ul>
+      <p class="small">Air University</p>
     </div>
+  </div>
+</section>
 
-    <div class="section">
-        <h2>🏆 Project Management & Instructional Leadership</h2>
-        <h3>General Secretary — Air University Robotics & Automation Society (AURAS)</h3>
-        <ul>
-            <li><strong>Technical Instruction:</strong> Spearheaded a comprehensive 5-day hands-on Robotics Workshop, serving as the lead technical speaker for 3 days to deliver core interactive instructional blocks on the IoT and Arduino IDE hardware interfaces.</li>
-            <li><strong>Large-Scale Event Operations:</strong> Managed end-to-end procurement logistics, financial budgets, and cross-functional student executive boards to successfully deploy a 3-day multi-competition National Engineering Event.</li>
-            <li><strong>Accolades:</strong> Received the prestigious <strong>Vice Chancellor's Letter of Recognition</strong> for exceptional organizational leadership and contributions to university-wide technical skill development.</li>
-        </ul>
+<section id="certificates">
+  <h2>Certificates & <span>Recognition</span></h2>
+  <div class="grid">
+    <div class="panel">
+      <h3>Internship Certificate 1</h3>
+      <p>Punjab Energy Department</p>
+      <p class="small">Upload your certificate image in the assets folder.</p>
     </div>
-
-    <div class="section">
-        <h2>🛠️ Core Competencies & Engineering Tools</h2>
-        <p><strong>Methodologies:</strong> Power Electronics • Converter Closed-Loop Control • Microgrid System Architecture • Predictive Control Theory (NNPC/MPC) • Protective Relaying • System Grounding & Earthing • Industrial Compliance Auditing</p>
-        <p><strong>Software & Programming:</strong> MATLAB • Simulink • PSpice • Proteus • Arduino IDE • C++ • Python (Basic) • AutoCAD (Basic)</p>
+    <div class="panel">
+      <h3>Internship Certificate 2</h3>
+      <p>Second internship experience</p>
+      <p class="small">Add the organization and certificate details.</p>
     </div>
-
-    <div class="footer">
-        <p>© 2026 Laiba Imran. Hosted securely via GitHub Pages.</p>
+    <div class="panel">
+      <h3>Appreciation Certificate</h3>
+      <p>Student Affairs Office</p>
+      <p class="small">Add the certificate image when available.</p>
     </div>
+    <div class="panel">
+      <h3>Leadership Recognition</h3>
+      <p>Vice Chancellor's Letter of Recognition</p>
+      <p class="small">Air University</p>
+    </div>
+  </div>
+</section>
 
-</div>
+<section id="skills">
+  <h2>Technical <span>Skills</span></h2>
+  <div class="panel">
+    <span class="pill">MATLAB</span>
+    <span class="pill">Simulink</span>
+    <span class="pill">Power Electronics</span>
+    <span class="pill">Model Predictive Control</span>
+    <span class="pill">PI Control</span>
+    <span class="pill">Microgrids</span>
+    <span class="pill">Smart Grids</span>
+    <span class="pill">Renewable Energy</span>
+    <span class="pill">Electrical Protection</span>
+    <span class="pill">Arduino IDE</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's <span>Connect</span></h2>
+  <div class="panel">
+    <p>I am interested in graduate engineering opportunities,
+       research collaboration and opportunities in the power and
+       renewable energy sectors.</p>
+    <br>
+    <p>Email: <a href="mailto:imranlaiba404@gmail.com">imranlaiba404@gmail.com</a></p>
+    <p>LinkedIn:
+      <a href="https://www.linkedin.com/in/laiba-imran-336510414/"
+         target="_blank" rel="noopener">Visit my LinkedIn</a>
+    </p>
+    <p>GitHub:
+      <a href="https://github.com/imranlaiba404-art"
+         target="_blank" rel="noopener">Visit my GitHub</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Laiba Imran · Electrical Engineering Portfolio
+</footer>
 
 </body>
 </html>
